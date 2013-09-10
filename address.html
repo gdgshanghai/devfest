@@ -2,28 +2,35 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevFest Shanghai 2013</title>
     <link rel="icon" href="favicon.ico">
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="statics/css/add-on/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="statics/css/add-on/bootstrap/new_bootstrap.css">
     <script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.9.1/jquery.js"></script>
     <script type="text/javascript" src="statics/js/add-on/bootstrap/bootstrap.js"></script>
 </head>
 <body onload="initialize()">
-    <header class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+   <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
         <div class="container">    
             <div class="navbar-header">
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
                 <a class="navbar-brand" href="/">DevFest Shanghai 2013</a>
             </div>
-            <div class="navbar-collapse">
+            <nav class="collapse navbar-collapse bs-navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="index.html">首页</a></li>
-                    <li><a href="agenda.html">日程安排</a></li>
+                    <li><a href="">日程安排</a></li>
                     <li><a href="">演讲嘉宾</a></li>
-                    <li class="active"><a href="#">活动会场</a></li>                    
-                    <li><a href="sponsor.html">活动赞助</a></li>
+                    <li><a href="">活动会场</a></li>                    
+                    <li class="active"><a href="sponsor.html">活动赞助</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </header>
     <div class="header-filler" style="height: 50px"></div>

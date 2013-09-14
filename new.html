@@ -35,23 +35,23 @@
                 <img src="statics/image/GDGShanghai.png" alt="">
                 <div class="title">Coming soon. Festival of developers, 20 October.</div>
             </div>
-            <div class="count-down-line">
+            <div id="count-down-line" class="count-down-line">
                 <div id="count-down-days" class="count-down-item">
-                    <div class="num">41</div>
+                    <div class="num">0</div>
                     <div class="unit">Days</div>
                 </div>
                 <div id="count-down-hours" class="count-down-item">
-                    <div class="num">18</div>
+                    <div class="num">0</div>
                     <div class="unit">Hours</div>
                 </div>
                 <div id="count-down-minutes" class="count-down-item">
-                    <div class="num">20</div>
+                    <div class="num">0</div>
                     <div class="unit">Minutes</div>
                 </div>
-                <!-- <div id="count-down-seconds" class="count-down-item">
-                    <div class="num">23</div>
+                <div id="count-down-seconds" class="count-down-item">
+                    <div class="num">0</div>
                     <div class="unit">Seconds</div>
-                </div> -->
+                </div>
             </div>
             <div class="signup-line">
                 <div class="signup-btn">
@@ -217,7 +217,75 @@
     });
     </script>
     <script>
+        // TODO: move these scritp into external js file
+        //===================================================================================
+        var Local = {}; // global namespace
+        
+        // const value
+        var SECOND = 1000;
+        var MINUTE = 60 * SECOND;
+        var HOUR = 60 * MINUTE;
+        var DAY = 24 * HOUR;
 
+
+        $(function() {
+            var deadline = new Date(2013, 9, 20, 9); // 2013.10.20 - 9:00 am
+
+            // update countdown view
+            var updateCount = (function() {
+                var days    = $('#count-down-days .num'),
+                    hours   = $('#count-down-hours .num'),
+                    minutes = $('#count-down-minutes .num'),
+                    seconds = $('#count-down-seconds .num');
+                return function(d, h, m, s) {
+                    days.text(d);
+                    hours.text(h);
+                    minutes.text(m);
+                    seconds.text(s);
+                };
+            })();
+
+            // format Date object to formated date
+            var formatRestTime = function(time) {
+                var d, h, m, s;
+                d = Math.floor(time / DAY);
+                time %= DAY;
+                h = Math.floor(time / HOUR);
+                time %= HOUR;
+                m = Math.floor(time / MINUTE);
+                time %= MINUTE;
+                s = Math.floor(time / SECOND);
+                return {
+                    d: d, // rest days
+                    h: h, // rest hours
+                    m: m, // rest minutes
+                    s: s  // rest seconds
+                };
+            };
+
+            // countdown every second from a specified time
+            var countDown = function(restTime) {
+                if (restTime > 0) {
+                    var t = formatRestTime(restTime),
+                        rest = restTime - SECOND;
+                    updateCount(t.d, t.h, t.m, t.s);
+
+                    setTimeout(function() {
+                        countDown(rest)
+                    }, SECOND);
+                } else {
+                    updateCount(0, 0, 0);
+                }
+            };
+
+            // start countdown since now
+            Local.startCount = function(){
+                var now = new Date();
+                var rest = deadline - now;
+                countDown(rest);
+            };
+            Local.startCount();
+        });
     </script>
 </body>
 </html>

@@ -3,7 +3,88 @@
 // Only import other less file into here.
 
 // Add-on rules
-@import "../add-on/bootstrap/variables.less";
+// @import "../add-on/bootstrap/variables.less";
 @import "../add-on/bootstrap/normalize.less";
-@import "../add-on/bootstrap/utilities.less";
-@import "../add-on/bootstrap/mixins.less";
+// @import "../add-on/bootstrap/utilities.less";
+// @import "../add-on/bootstrap/mixins.less";
+
+.content {
+}
+.first {
+    background: url(/statics/image/background.png) top no-repeat fixed;
+    .hero {
+        background-color: rgba(0, 0, 0, 0.5);
+        min-height: 400px;
+        text-align: center;
+        img {
+            height: 207px;
+            margin-top: 88px;
+        }
+        .title {
+            margin-top: 40px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 24px;
+        }
+    }
+    .count-down-line {
+        margin: 24px 200px;
+        font-size: 0; // TODO: use float
+        .count-down-item {
+            display: inline-block; // TODO: use float
+            color: white;
+            width: 33.33%;
+            text-align: center;
+            .num {
+                font-size: 72px;
+                line-height: 72px;
+                font-weight: bold;
+            }
+            .unit {
+                line-height: 26px;
+                font-size: 26px;
+            }
+        }
+    }
+    .signup-line {
+        padding-top: 120px;
+        background-color: rgba(0, 0, 0, 0.5);
+        min-height: 180px;
+        text-align: center;
+        height: 220px;
+        .signup-btn {
+            position: relative;
+            cursor: pointer;
+            margin: 0px auto;
+            border-radius: 88px;
+            width: 176px;
+            height: 176px;
+            padding: 13px;
+            background-color: rgba(0, 0, 0, 0.5);
+            
+            .inner {
+                border-radius: 88px;
+                width: 150px;
+                height: 150px;
+                background-color: rgba(0, 0, 0, 0.5);
+                line-height: 150px;
+                font-size: 25px;
+                color: rgb(160, 160, 160, 0.8);
+            }
+
+            // transition: 0.5s;
+
+            &:hover {
+                padding: 0px;
+                .inner {
+                    height: 176px;
+                    width: 176px;
+                    line-height: 176px;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+.second {
+    // background-color: #666;
+}

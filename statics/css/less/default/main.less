@@ -8,6 +8,9 @@
 // @import "../add-on/bootstrap/utilities.less";
 // @import "../add-on/bootstrap/mixins.less";
 
+* {
+    font-family: arial, sans-serif;
+}
 .content {
 }
 .first {
@@ -44,6 +47,12 @@
                 font-size: 26px;
             }
         }
+    }
+    .triangle {
+        margin: -70px auto 0;
+        width: 70px;
+        border: 35px solid transparent;
+        border-bottom: 35px solid rgba(0, 0, 0, 0.5);
     }
     .signup-line {
         padding-top: 120px;
@@ -85,6 +94,114 @@
         }
     }
 }
-.second {
-    // background-color: #666;
+
+.overview, .agenda, .speaker, .address, .sponsor {
+    .title {
+        position: relative;
+        margin: -88px auto;
+        border-radius: 88px;
+        width: 176px;
+        height: 176px;
+        padding: 13px;
+        background-color: rgba(0, 0, 0, 0.2);
+        text-align: center;
+        .inner {
+            border-radius: 88px;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(0, 0, 0, 0.2);
+            line-height: 150px;
+            font-size: 25px;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+    .container {
+        .row.content {
+            background-color: rgba(0, 0, 0, 0.5);
+            min-height: 120px;
+            padding: 108px 0;
+        }
+    }
+}
+
+.overview {
+    background-color: #3369E8;
+}
+.agenda {
+    background-color: #D50F25;
+    .agenda-table {
+        // color: white;
+        background-color: white;
+        * {
+            vertical-align: middle;
+        }
+        .morning, .afternoon {
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            background-color: darken(#D50F25, 10%);
+        }
+        .main-sessions, .parallel-sessions {
+            text-align: center;
+        }
+        .time {
+            text-align: center;
+        }
+    }
+    .tips {
+        color: #ddd;
+    }
+}
+.speaker {
+    background-color: #EEB211;
+}
+.address {
+    background-color: #009925;
+    color: white;
+    .address-info {
+        padding-left: 60px;
+        .icon-location {
+            height: 40px;
+            margin-right: 10px;
+            float: left;
+        }
+        h1 {
+            margin: 0 0 40px 0;
+            line-height: 40px;
+            font-weight: bold;
+        }
+        h3 {
+            margin: 0 0 40px 0;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+    .map {
+        #map_canvas {
+            height: 400px;
+            width: 700px;
+        }
+    }
+}
+.sponsor {
+    background-color: #666;
+    .row.content {
+        // background-color: transparent !important;
+    }
+    h4 {
+        color: #ddd;
+        margin-bottom: 20px;
+    }
+    .logo-wrapper {
+        padding: 10px;
+        margin-right: 30px;
+        background-color: rgba(0, 0, 0, 0.5);
+        float: left;
+        .logo {
+            height: 78px;
+            background-color: white;
+        }
+    }
 }

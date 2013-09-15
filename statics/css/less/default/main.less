@@ -60,6 +60,9 @@
         min-height: 180px;
         text-align: center;
         height: 220px;
+        a:hover {
+            text-decoration: none;
+        }
         .signup-btn {
             position: relative;
             cursor: pointer;
@@ -155,6 +158,13 @@
 }
 .speaker {
     background-color: #EEB211;
+    h1 {
+        font-size: 48px;
+        line-height: 64px;
+        color: darken(#EEB211, 20%);
+        text-align: center;
+        background-color: rgba(255,255,255,0.5);
+    }
 }
 .address {
     background-color: #009925;
@@ -201,7 +211,13 @@
         float: left;
         .logo {
             height: 78px;
-            background-color: white;
+            background-color: #efefef;
         }
     }
+}
+footer, .footer {
+    color: #eee;
+    font-size: 16px;
+    padding: 5px 0;
+    background-color: #444;
 }

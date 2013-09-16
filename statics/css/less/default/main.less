@@ -121,7 +121,7 @@
     }
     .container {
         .row.content {
-            background-color: rgba(0, 0, 0, 0.5);
+            // background-color: rgba(0, 0, 0, 0.5);
             min-height: 120px;
             padding: 108px 0;
         }
@@ -166,6 +166,41 @@
 }
 .speaker {
     background-color: #EEB211;
+    .speaker-info {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .photo {
+            height: 180px;
+            width: 180px;
+            border-radius: 90px;
+            margin-top: -15px;
+            float: left;
+            border: 10px solid darken(#EEB211, 10%);
+            // border: 10px solid lighten(#EEB211, 10%);
+        }
+        .info {
+            color: darken(#EEB211, 20%);
+            height: 150px;
+            margin-left: 20px;
+            margin-right: 10px;
+            padding: 20px 20px 20px 180px;
+            // background-color: darken(#EEB211, 20%);
+            background-color: lighten(#EEB211, 20%);
+            .name {
+                font-size: 24px;
+                font-weight: bold;
+            }
+        }
+        .speach {
+            color: white;
+            font-size: 18px;
+            line-height: 18px;
+            padding: 5px 15px;
+            margin-top: -18px;
+            float: right;
+            background-color: darken(#EEB211, 20%);
+        }
+    }
     h1 {
         font-size: 48px;
         line-height: 64px;

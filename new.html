@@ -7,8 +7,10 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="statics/css/add-on/bootstrap/new_bootstrap.css">
     <link rel="stylesheet" href="statics/css/less/default/main.css">
+    <link rel="stylesheet" href="statics/plugin/superslides/superslides.css">
     <script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.9.1/jquery.js"></script>
     <script type="text/javascript" src="statics/js/add-on/bootstrap/bootstrap.js"></script>
+    <script type="text/javascript" src="statics/plugin/superslides/jquery.superslides.min.js"></script>
 </head>
 <body>
 <!--     <header class="navbar navbar-fixed-top navbar-inverse" role="navigation">
@@ -69,37 +71,69 @@
         </div>
 
         <div class="overview">
-            <div class="container">
-                <div class="row content" id="google_product">
-                    <div class="col-md-12">
-                        <div class="col-md-3">
-                            <img src="statics/image/icons/icon_android.png" class="img-responsive" alt="Responsive image" />
-                        </div>
-                        <div class="col-md-3">  
-                            <img src="statics/image/icons/icon_chrome.png" class="img-responsive" alt="Responsive image" />
-                        </div>
-                        <div class="col-md-3">    
-                            <img src="statics/image/icons/icon_drive.png" class="img-responsive" alt="Responsive image" />
-                        </div>
-                        <div class="col-md-3">    
-                            <img src="statics/image/icons/icon_g+.png" class="img-responsive" alt="Responsive image" />
-                        </div>                   
-                    </div>
+            <div class="container" id="overview_container">
+              
+                <!-- test superslides -->
+                <div id="slides">
+                  <ul class="slides-container">
+                    <li>
+                      <div class="">
+                        <div class="row content slide_item" id="google_product">
+                            <div class="col-md-12">
+                                <div class="col-md-3">
+                                    <img src="statics/image/icons/icon_android.png" class="img-responsive preserve" alt="Responsive image" />
+                                </div>
+                                <div class="col-md-3">  
+                                    <img src="statics/image/icons/icon_chrome.png" class="img-responsive preserve" alt="Responsive image" />
+                                </div>
+                                <div class="col-md-3">    
+                                    <img src="statics/image/icons/icon_drive.png" class="img-responsive preserve" alt="Responsive image" />
+                                </div>
+                                <div class="col-md-3">    
+                                    <img src="statics/image/icons/icon_g+.png" class="img-responsive preserve" alt="Responsive image" />
+                                </div>                   
+                            </div>
                     
-                    <div class="col-md-12">
-                        <div class="col-md-3">    
-                            <img src="statics/image/icons/icon_gmail.png" class="img-responsive" alt="Responsive image" />
-                        </div>
-                        <div class="col-md-3">      
-                            <img src="statics/image/icons/icon_gtalk.png" class="img-responsive" alt="Responsive image" />
-                        </div>
-                        <div class="col-md-3">     
-                            <img src="statics/image/icons/icon_play.png" class="img-responsive" alt="Responsive image" />
-                        </div>
-                        <div class="col-md-3">     
-                            <img src="statics/image/icons/icon_android.png" class="img-responsive" alt="Responsive image" />
-                        </div>
-                    </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-3">    
+                                        <img src="statics/image/icons/icon_gmail.png" class="img-responsive preserve" alt="Responsive image" />
+                                    </div>
+                                    <div class="col-md-3">      
+                                        <img src="statics/image/icons/icon_gtalk.png" class="img-responsive preserve"  alt="Responsive image" />
+                                    </div>
+                                    <div class="col-md-3">     
+                                        <img src="statics/image/icons/icon_play.png" class="img-responsive preserve" alt="Responsive image" />
+                                    </div>
+                                    <div class="col-md-3">     
+                                        <img src="statics/image/icons/icon_android.png" class="img-responsive preserve" alt="Responsive image" />
+                                    </div>
+                                </div>
+                            </div>
+                      </div>
+                      <div class="text-container">
+                        Slide One
+                      </div>
+                    </li>
+                    <li>
+                      <!--  to do 要将纪念品模糊处理作为背景么？ -->
+                      <!-- <img src="statics/image/souvenir1.jpg" class="img-responsive preserve" alt="souvenir1" /> -->
+                      <img src="statics/image/souvenir2.jpg" class="img-responsive" alt="souvenir2" />
+                      <div class="text-container">
+                            精美纪念品等你拿~
+                      </div>
+                    </li>
+                    <li>
+                      <img src="http://flickholdr.com/1000/800/tech" alt="">
+                      <div class="text-container">
+                        Slide three
+                      </div>
+                    </li>
+                  </ul>
+                  <nav class="slides-navigation">
+                    <a href="#" class="next">Next</a>
+                    <a href="#" class="prev">Previous</a>
+                  </nav>
+                </div>
                 </div>
             </div>
         </div>
@@ -359,9 +393,8 @@
     </div>
     <footer class="footer">
         <div class="container">
-        <p>
-            DevFest 2013 Shanghai
-        </p>
+            <p>DevFest 2013 Shanghai 更多活动进展，请关注活动微信</p>
+            <img id="aimg_J1RSH" class="zoom" width="150" height="150" src="http://gallery.mailchimp.com/3354bfad8c6e60f4e1333e2c6/images/qrcode_for_gh_2625d70d8b6a_344.jpg" border="0" alt="GDG Shanghai" />
         </div>
     </footer>
     <!-- 调用 Google Map API -->
@@ -384,6 +417,9 @@
     }       
     $(document).ready(function() {
         initialize();
+        // 调用slides
+        $('#slides').superslides({'inherit_width_from':'#overview_container'});
+        
     });
     </script>
     <script>

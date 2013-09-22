@@ -11,6 +11,30 @@
     <script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.9.1/jquery.js"></script>
     <script type="text/javascript" src="statics/js/add-on/bootstrap/bootstrap.js"></script>
     <script type="text/javascript" src="statics/plugin/superslides/jquery.superslides.min.js"></script>
+    <script>
+    /* GA统计 */
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42550058-3', 'gdgshanghai.com');
+  ga('send', 'pageview');
+
+    </script>
+    <script type="text/javascript">
+    /* GA track signup clicks */
+    function trackOutboundLink(link, category, action) {      
+    try { 
+    _gaq.push(['_trackEvent', category , action]); 
+    } catch(err){}     
+    setTimeout(function() {
+    document.location.href = link.href;
+    }, 100);
+    }
+    </script>
+     
+
 </head>
 <body>
 <!--     <header class="navbar navbar-fixed-top navbar-inverse" role="navigation">
@@ -58,7 +82,7 @@
                     </div>
                     <div class="triangle"></div>
                     <div class="signup-line">
-                        <a href="javascript:alert('报名页面正在制作中，请稍后再访问。给您带来不便非常抱歉。')">
+                        <a href="javascript:alert('报名页面正在制作中，请稍后再访问。给您带来不便非常抱歉。')" onClick="trackOutboundLink(this, 'Outbound Links', 'example.com'); return false;">
                             <div class="signup-btn">
                                 <div class="inner">
                                     Sign Up
@@ -73,67 +97,70 @@
         <div class="overview">
             <div class="container" id="overview_container">
               
-                <!-- test superslides -->
-                <div id="slides">
-                  <ul class="slides-container">
-                    <li>
-                      <div class="">
-                        <div class="row content slide_item" id="google_product">
-                            <div class="col-md-12">
-                                <div class="col-md-3">
-                                    <img src="statics/image/icons/icon_android.png" class="img-responsive preserve" alt="Responsive image" />
+                <!-- superslides -->
+                <div id="slides_container">
+                    <div id="slides">
+                    <ul class="slides-container">
+                        <li>
+                            <div class="">
+                                <div class="row content slide_item" id="google_product">
+                                    <div class="col-md-12">
+                                        <div class="col-md-3">
+                                            <img src="statics/image/icons/icon_android.png" class="img-responsive preserve" alt="Responsive image" />
+                                        </div>
+                                        <div class="col-md-3">  
+                                            <img src="statics/image/icons/icon_chrome.png" class="img-responsive preserve" alt="Responsive image" />
+                                        </div>
+                                        <div class="col-md-3">    
+                                            <img src="statics/image/icons/icon_drive.png" class="img-responsive preserve" alt="Responsive image" />
+                                        </div>
+                                        <div class="col-md-3">    
+                                            <img src="statics/image/icons/icon_g+.png" class="img-responsive preserve" alt="Responsive image" />
+                                        </div>                   
+                                    </div>
+                            
+                                    <div class="col-md-12">
+                                        <div class="col-md-3">    
+                                            <img src="statics/image/icons/icon_gmail.png" class="img-responsive preserve" alt="Responsive image" />
+                                        </div>
+                                        <div class="col-md-3">      
+                                            <img src="statics/image/icons/icon_gtalk.png" class="img-responsive preserve"  alt="Responsive image" />
+                                        </div>
+                                        <div class="col-md-3">     
+                                            <img src="statics/image/icons/icon_play.png" class="img-responsive preserve" alt="Responsive image" />
+                                        </div>
+                                        <div class="col-md-3">     
+                                            <img src="statics/image/icons/icon_android.png" class="img-responsive preserve" alt="Responsive image" />
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-3">  
-                                    <img src="statics/image/icons/icon_chrome.png" class="img-responsive preserve" alt="Responsive image" />
-                                </div>
-                                <div class="col-md-3">    
-                                    <img src="statics/image/icons/icon_drive.png" class="img-responsive preserve" alt="Responsive image" />
-                                </div>
-                                <div class="col-md-3">    
-                                    <img src="statics/image/icons/icon_g+.png" class="img-responsive preserve" alt="Responsive image" />
-                                </div>                   
                             </div>
-                    
-                                <div class="col-md-12">
-                                    <div class="col-md-3">    
-                                        <img src="statics/image/icons/icon_gmail.png" class="img-responsive preserve" alt="Responsive image" />
-                                    </div>
-                                    <div class="col-md-3">      
-                                        <img src="statics/image/icons/icon_gtalk.png" class="img-responsive preserve"  alt="Responsive image" />
-                                    </div>
-                                    <div class="col-md-3">     
-                                        <img src="statics/image/icons/icon_play.png" class="img-responsive preserve" alt="Responsive image" />
-                                    </div>
-                                    <div class="col-md-3">     
-                                        <img src="statics/image/icons/icon_android.png" class="img-responsive preserve" alt="Responsive image" />
-                                    </div>
-                                </div>
+                            <div class="text-container">
+                            Slide One
                             </div>
-                      </div>
-                      <div class="text-container">
-                        Slide One
-                      </div>
-                    </li>
-                    <li>
-                      <!--  to do 要将纪念品模糊处理作为背景么？ -->
-                      <!-- <img src="statics/image/souvenir1.jpg" class="img-responsive preserve" alt="souvenir1" /> -->
-                      <img src="statics/image/souvenir2.jpg" class="img-responsive" alt="souvenir2" />
-                      <div class="text-container">
-                            精美纪念品等你拿~
-                      </div>
-                    </li>
-                    <li>
-                      <img src="http://flickholdr.com/1000/800/tech" alt="">
-                      <div class="text-container">
-                        Slide three
-                      </div>
-                    </li>
-                  </ul>
+                        </li>
+                        <li>
+                            <!--  to do 要将纪念品模糊处理作为背景么？ -->
+                            <!-- <img src="statics/image/souvenir1.jpg" class="img-responsive preserve" alt="souvenir1" /> -->
+                            <img src="statics/image/souvenir2.jpg" class="img-responsive" alt="souvenir2" />
+                            <div class="text-container">
+                                精美纪念品等你拿~
+                            </div>
+                        </li>
+                        <li>
+                            <img src="http://flickholdr.com/1000/800/tech" alt="">
+                            <div class="text-container">
+                                Slide three
+                            </div>
+                        </li>
+                    </ul>
                   <nav class="slides-navigation">
                     <a href="#" class="next">Next</a>
                     <a href="#" class="prev">Previous</a>
                   </nav>
+                </div>                    
                 </div>
+
                 </div>
             </div>
         </div>
@@ -191,7 +218,7 @@
                                     <td>Interview:创业者A-Z</td>
                                     <td  class="time"rowspan="2">13:00 - 14:50</td>
                                     <td rowspan="2">HTML5 Codelab(写代码攻破HTML5问题)</td>
-                                    <!-- <td>王淮，张涛，庞小伟</td> -->
+                                    <!-- <td>王淮，王建硕，庞小伟</td> -->
                                 </tr>
                                 <tr>
                                     <td class="time">14:30 - 15:00</td>
@@ -200,7 +227,7 @@
                                 </tr>
                                 <tr>
                                     <td class="time">15:00 - 15:40</td>
-                                    <td>Lighting Talk(n个创业产品的创始人来讲)</td>
+                                    <td>Lighting Talk</td>
                                     <td  class="time"rowspan="2">15:00 - 16:00</td>
                                     <td rowspan="2">茶歇</td>
                                     <!-- <td>ucloud, 英语流利说，名片全能王，火花电视，今夜酒店特价，ect</td> -->
@@ -219,8 +246,8 @@
                                 </tr>
                                 <tr>
                                     <td class="time">17:00 - 18:00</td>
-                                    <td>HTML5讲座</td>
-                                    <!-- <td></td> -->
+                                    <td>谈谈Android手机异常耗电的原因</td>
+                                    <!-- <td>张康宗</td> -->
                                 </tr>
                             </tbody>
                         </table>
@@ -283,12 +310,12 @@
                         </div>
                     </div>
                     <div class="col-md-6 speaker-info">
-                        <div class="speach">待定</div>
+                        <div class="speach">Codelab 主持</div>
                         <img class="photo" src="statics/image/speakers/placeholder.jpg" alt="">
                         <div class="info">
-                            <div class="name">张涛</div>
+                            <div class="name">王建硕</div>
                             <!-- <div class="title"></div> -->
-                            <div class="introduction">大众点评网创始人，CEO，推崇《卓有成效的管理者》。</div>
+                            <div class="introduction"></div>
                             <!-- <div class="speach"></div> -->
                         </div>
                     </div>
@@ -304,7 +331,7 @@
                     </div>
                     <div class="col-md-6 speaker-info">
                         <div class="speach">Go Go GO! Golang的用武之地</div>
-                        <img class="photo" src="statics/image/speakers/xushiwei.jpg" alt="">
+                        <img class="photo" src="statics/image/speakers/xushiwei.jpg" alt="许式伟">
                         <div class="info">
                             <div class="name">许式伟</div>
                             <!-- <div class="title"></div> -->
@@ -313,13 +340,12 @@
                         </div>
                     </div>
                     <div class="col-md-6 speaker-info">
-                        <div class="speach">待定</div>
-                        <img class="photo" src="statics/image/speakers/shixuan.jpg" alt="">
+                        <div class="speach">谈谈Android手机异常耗电的原因</div>
+                        <img class="photo" src="statics/image/speakers/placeholder.jpg" alt="张康宗">
                         <div class="info">
-                            <div class="name">施煊</div>
+                            <div class="name">张康宗</div>
                             <!-- <div class="title"></div> -->
-                            <div class="introduction">前证券之星首席架构师，领导开发了广受好评的HTML5版本的证券应用。
-也是HTML5梦工场的核心成员，曾在去年的Google Developer Day大会任讲师。</div>
+                            <div class="introduction">网名：Smallfrogs，2005年入职金山，曾经参与和主导多款千万用户级互联网客户端软件开发，金山手机毒霸技术负责人。</div>
                             <!-- <div class="speach"></div> -->
                         </div>
                     </div>
@@ -341,13 +367,13 @@
                     <div class="col-md-4 address-info">
                         <img class="icon-location" src="statics/image/icon-location2.png" alt="">
                         <h1 class="">会场信息</h1>
-                        <h3>上海杨浦区淞沪路290号<br>创智天地广场7号楼会议中心</h3>
-                        <p>周边地铁：地铁10号线，地铁10号线支线</p>
-                        <p>周边公交：329，406，61，55，538，168，99，937，942，749</p>
+                        <h3>上海市浦东张江博云路2号<br>浦软大厦</h3>
+                        <p>周边地铁：地铁2号线 金科路</p>
+                        <p>周边公交：1046路 浦东12路 636路</p>
                     </div>
-                    <div class="col-md-8 map">
+                    <a class="col-md-8 map" href="http://ditu.google.cn/maps?q=上海市浦东张江博云路2号浦软大厦" title="到Google上查看详细地图信息">
                         <div id="map_canvas"></div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -402,7 +428,7 @@
     <script type="text/javascript"> 
     function initialize() {
         var mapOptions = {
-          center: new google.maps.LatLng(31.3076, 121.513),
+          center: new google.maps.LatLng(31.202521973055223, 121.60407688468695),
           zoom: 16,
           mapTypeId: google.maps.MapTypeId.ROADMAP,
           
@@ -412,7 +438,7 @@
         var marker = new google.maps.Marker({
             position: map.getCenter(),
             map: map,
-            title: '上海杨浦区淞沪路290号创智天地广场7号楼会议中心'
+            title: '上海市浦东张江博云路2号浦软大厦'
         });
     }       
     $(document).ready(function() {

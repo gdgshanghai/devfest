@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>DevFest Shanghai 2013</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="statics/css/add-on/bootstrap/new_bootstrap.css">
+    <link rel="stylesheet" href="statics/css/less/default/main.css">
+    <!-- <link rel="stylesheet" href="statics/plugin/superslides/superslides.css"> -->
+    <script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.9.1/jquery.js"></script>
+    <script type="text/javascript" src="statics/js/add-on/bootstrap/bootstrap.js"></script>
+    <!-- <script type="text/javascript" src="statics/plugin/superslides/jquery.superslides.min.js"></script>-->
+    <script>
+    /* GA统计 */
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42550058-3', 'gdgshanghai.com');
+  ga('send', 'pageview');
+
+    </script>
+    <script type="text/javascript">
+    /* GA track signup clicks */
+    function trackOutboundLink(link, category, action) {      
+    try { 
+    _gaq.push(['_trackEvent', category , action]); 
+    } catch(err){}     
+    setTimeout(function() {
+    document.location.href = link.href;
+    }, 100);
+    }
+    </script>
+     
+
+</head>
+<body>
+<!--     <header class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container">    
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">DevFest Shanghai 2013</a>
+            </div>
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="">Home</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="">演讲嘉宾</a></li>
+                    <li><a href="address.html">活动会场</a></li>                    
+                    <li><a href="sponsor.html">活动赞助</a></li>
+                </ul>
+            </div>
+        </div>
+    </header> -->
+    <!-- <div class="header-filler" style="height: 50px"></div> -->
+    <div class="content">
+        <div class="first">
+            <div class="container">
+                <div class="row">
+                    <div class="hero">
+                        <img src="statics/image/gdglogo.png" alt="">
+                        <div class="title">10月20日，谷歌开发者节即将开幕</div>
+                    </div>
+                    <div id="count-down-line" class="count-down-line">
+                        <div id="count-down-days" class="count-down-item">
+                            <div class="num">0</div>
+                            <div class="unit">天</div>
+                        </div>
+                        <div id="count-down-hours" class="count-down-item">
+                            <div class="num">0</div>
+                            <div class="unit">小时</div>
+                        </div>
+                        <div id="count-down-minutes" class="count-down-item">
+                            <div class="num">0</div>
+                            <div class="unit">分钟</div>
+                        </div>
+                        <div id="count-down-seconds" class="count-down-item">
+                            <div class="num">0</div>
+                            <div class="unit">秒</div>
+                        </div>
+                    </div>
+                    <div class="triangle"></div>
+                    <div class="signup-line">
+                        <a target="_blank" href="http://goo.gl/gxTHAx" onClick="trackOutboundLink(this, 'Outbound Links', 'example.com'); return false;">
+                            <div class="signup-btn">
+                                <div class="inner">
+                                    点我报名
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overview">
+            <div class="container" id="overview_container">
+                <h2>内容持续更新</h2>
+                <!-- superslides -->
+                <!-- 待完善
+                <div id="slides_container">
+                    <div id="slides">
+                    <ul class="slides-container">
+                        <li>
+                            <div class="">
+                                <div class="row content slide_item" id="google_product">
+                                    <div class="col-md-12">
+                                        <div class="col-md-3">
+                                            <img src="statics/image/icons/icon_android.png" class="img-responsive preserve" alt="Responsive image" />
+                                        </div>
+                                        <div class="col-md-3">  
+                                            <img src="statics/image/icons/icon_chrome.png" class="img-responsive preserve" alt="Responsive image" />
+                                        </div>
+                                        <div class="col-md-3">    
+                                            <img src="statics/image/icons/icon_drive.png" class="img-responsive preserve" alt="Responsive image" />
+                                        </div>
+                                        <div class="col-md-3">    
+                                            <img src="statics/image/icons/icon_g+.png" class="img-responsive preserve" alt="Responsive image" />
+                                        </div>                   
+                                    </div>
+                            
+                                    <div class="col-md-12">
+                                        <div class="col-md-3">    
+                                            <img src="statics/image/icons/icon_gmail.png" class="img-responsive preserve" alt="Responsive image" />
+                                        </div>
+                                        <div class="col-md-3">      
+                                            <img src="statics/image/icons/icon_gtalk.png" class="img-responsive preserve"  alt="Responsive image" />
+                                        </div>
+                                        <div class="col-md-3">     
+                                            <img src="statics/image/icons/icon_play.png" class="img-responsive preserve" alt="Responsive image" />
+                                        </div>
+                                        <div class="col-md-3">     
+                                            <img src="statics/image/icons/icon_android.png" class="img-responsive preserve" alt="Responsive image" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-container">
+                            Slide One
+                            </div>
+                        </li>
+                        <li>
+                            //  to do 要将纪念品模糊处理作为背景么？ 
+                            //  <img src="statics/image/souvenir1.jpg" class="img-responsive preserve" alt="souvenir1" /> 
+                            <img src="statics/image/souvenir2.jpg" class="img-responsive" alt="souvenir2" />
+                            <div class="text-container">
+                                精美纪念品等你拿~
+                            </div>
+                        </li>
+                        <li>
+                            <img src="http://flickholdr.com/1000/800/tech" alt="">
+                            <div class="text-container">
+                                Slide three
+                            </div>
+                        </li>
+                    </ul>
+                  <nav class="slides-navigation">
+                    <a href="#" class="next">Next</a>
+                    <a href="#" class="prev">Previous</a>
+                  </nav>
+                </div>                    
+                </div>
+                -->
+                </div>
+            </div>
+        </div>
+
+        <div class="agenda">
+            <div class="container">
+                <div class="row">
+                    <div class="title">
+                        <div class="inner">
+                            日程安排    
+                        </div>
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-md-9 col-md-offset-1">
+                        <table class="table table-bordered agenda-table">
+                            <tbody>
+                                <tr>
+                                    <th class="morning" colspan="4">上午</th>
+                                </tr>
+                                <tr>
+                                    <td  class="time"colspan="1">08:30 - 09:00</td>
+                                    <td colspan="3">签到</td>
+                                    <!-- <td></td> -->
+                                </tr>
+                                <tr>
+                                    <td  class="time"colspan="1">09:10 - 09:30</td>
+                                    <td colspan="3">大会致辞和日程介绍</td>
+                                    <!-- <td>陆康</td> -->
+                                </tr>
+                                <tr>
+                                    <td  class="time"colspan="1">09:30 - 10:30</td>
+                                    <td colspan="3">待定</td>
+                                    <!-- <td>栾跃 or Tony</td> -->
+                                </tr>
+                                <tr>
+                                    <td  class="time"colspan="1">10:30 - 11:30</td>
+                                    <td colspan="3">Go桌面的故事</td>
+                                    <!-- <td>张向东</td> -->
+                                </tr>
+                                <tr>
+                                    <td  class="time"colspan="1">11:30 - 13:00</td>
+                                    <td colspan="3">展览，午餐，自由交流</td>
+                                </tr>
+                                <tr>
+                                    <th class="afternoon" colspan="4"><strong>下午</strong></th>
+                                </tr>
+                                <tr>
+                                    <td class="main-sessions" colspan="2"><strong>主会场</strong>(300人)</td>
+                                    <td class="parallel-sessions" colspan="2"><strong>分会场</strong>(70人)</td>
+                                    <!-- <td></td> -->
+                                </tr>
+                                <tr>
+                                    <td class="time">13:00 - 14:30</td>
+                                    <td>创始人访谈</td>
+                                    <td  class="time"rowspan="2">13:00 - 14:50</td>
+                                    <td rowspan="2">HTML5 Codelab(写代码攻破HTML5问题)</td>
+                                    <!-- <td>王淮，王建硕，庞小伟</td> -->
+                                </tr>
+                                <tr>
+                                    <td class="time">14:30 - 15:00</td>
+                                    <td>茶歇</td>
+                                    <!-- <td></td> -->
+                                </tr>
+                                <tr>
+                                    <td class="time">15:00 - 15:40</td>
+                                    <td>快速演讲</td>
+                                    <td  class="time"rowspan="2">15:00 - 16:00</td>
+                                    <td rowspan="2">茶歇</td>
+                                    <!-- <td>ucloud, 英语流利说，名片全能王，火花电视，今夜酒店特价，ect</td> -->
+                                </tr>
+                                <tr>
+                                    <td class="time">15:40 - 16:00</td>
+                                    <td>抽奖</td>
+                                    <!-- <td></td> -->
+                                </tr>
+                                <tr>
+                                    <td class="time">16:00 - 17:00</td>
+                                    <td>Go Go GO! Golang的用武之地</td>
+                                    <td  class="time"rowspan="2">16:00 - 18:00</td>
+                                    <td rowspan="2">创业工作坊</td>
+                                    <!-- <td>许式伟</td> -->
+                                </tr>
+                                <tr>
+                                    <td class="time">17:00 - 18:00</td>
+                                    <td>移动浏览器视频的挑战和机遇</td>
+                                    <!-- <td>张康宗</td> -->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-2 tips">
+                        <p>
+                            分会场活动人数有限，如果您要参与分会场的活动，请在报名注明会参加分会场的活动。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="speaker">
+            <div class="container">
+                <div class="row">
+                    <div class="title">
+                        <div class="inner">
+                            嘉宾介绍    
+                        </div>
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-md-6 speaker-info">
+                        <!-- <div class="speach">待定</div> -->
+                        <img class="photo" src="statics/image/speakers/bill.jpg" alt="">
+                        <div class="info">
+                            <div class="name">栾跃</div>
+                            <!-- <div class="title"></div> -->
+                            <div class="introduction">Google 大中华区开发者关系负责人，精通众多 Google 技术。在摩托罗拉和微软等公司从事了二十余年系统工程设计和软件开发管理工作，现负责 Google 开发者关系和技术推广工作。</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 speaker-info">
+                        <!-- <div class="speach">待定</div> -->
+                        <img class="photo" src="statics/image/speakers/Tony.png" alt="">
+                        <div class="info">
+                            <div class="name">Tony Chan</div>
+                            <!-- <div class="title"></div> -->
+                            <div class="introduction">在 Google 负责 Android 的推广工作。于 2007 年加入 Google，帮助开发者解决各种 Google 产品和技术的相关问题，如 Google Checkout, Apps 和 Android 等。</div>
+                            <!-- <div class="speach"></div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-6 speaker-info">
+                        <div class="speach">Go桌面的故事</div>
+                        <img class="photo" src="statics/image/speakers/zhangxiangdong.png" alt="">
+                        <div class="info">
+                            <div class="name">张向东</div>
+                            <!-- <div class="title"></div> -->
+                            <div class="introduction">3G门户董事长，Go Launcher创始人。产品 Go Launcher 在全球总用户数量超过2亿，并正式启动北美商业化运营。</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 speaker-info">
+                        <!-- <div class="speach">待定</div> -->
+                        <img class="photo" src="statics/image/speakers/wanghuai.png" alt="">
+                        <div class="info">
+                            <div class="name">王淮</div>
+                            <!-- <div class="title"></div> -->
+                            <div class="introduction">Facebook早期民工(中国籍第二位工程师和第一位研发经理)。百姓，大众点评CEO顾问。斯坦福疏漏品。现致景投资合伙人(Partner with 张川和薛蛮子), 天使到Pre-A。</div>
+                            <!-- <div class="speach"></div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-6 speaker-info">
+                        <div class="speach">创始人访谈</div>
+                        <img class="photo" src="statics/image/speakers/wangjianshuo.jpg" alt="">
+                        <div class="info">
+                            <div class="name">王建硕</div>
+                            <!-- <div class="title"></div> -->
+                            <div class="introduction">百姓网创始人，CEO</div>
+                            <!-- <div class="speach"></div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-6 speaker-info">
+                        <!-- <div class="speach">待定</div> -->
+                        <img class="photo" src="statics/image/speakers/pangxiaowei.png" alt="">
+                        <div class="info">
+                            <div class="name">庞小伟</div>
+                            <!-- <div class="title"></div> -->
+                            <div class="introduction">联商网，e都市董事长，创始人，天使湾创始人，ALDA粉丝。</div>
+                            <!-- <div class="speach"></div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-6 speaker-info">
+                        <div class="speach">Go Go GO! Golang的用武之地</div>
+                        <img class="photo" src="statics/image/speakers/xushiwei.jpg" alt="许式伟">
+                        <div class="info">
+                            <div class="name">许式伟</div>
+                            <!-- <div class="title"></div> -->
+                            <div class="introduction">七牛云存储CEO。曾任盛大资深研究员、金山技术总监、WPS Office 2005 首席架构师。技术关注领域包括分布式存储、网络操作系统、Erlang 风格编程与最佳服务端编程实践、搜索引擎等。</div>
+                            <!-- <div class="speach"></div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-6 speaker-info">
+                        <div class="speach">移动浏览器视频的挑战和机遇</div>
+                        <img class="photo" src="statics/image/speakers/zengwei.jpg" alt="曾崴">
+                        <div class="info">
+                            <div class="name">曾崴</div>
+                            <!-- <div class="title"></div> -->
+                            <div class="introduction">有着多年移动开发经验的资深程序员，参与的项目：金山T盘、金山毒霸后台分析系统。目前致力于猎豹浏览器Android版的视频模块开发。</div>
+                            <!-- <div class="speach"></div> -->
+                        </div>
+                    </div>
+                    <!-- <h1>Coming Soon</h1> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="address">
+            <div class="container">
+                <div class="row">
+                    <div class="title">
+                        <div class="inner">
+                            活动会场    
+                        </div>
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-md-4 address-info">
+                        <img class="icon-location" src="statics/image/icon-location2.png" alt="">
+                        <h1 class="">会场信息</h1>
+                        <h3>上海市浦东张江博云路2号<br>浦软大厦</h3>
+                        <p>时间：2013年10月20日</p>
+                        <p>周边地铁：地铁2号线 金科路</p>
+                        <p>周边公交：1046路 浦东12路 636路</p>
+                    </div>
+                    <a class="col-md-8 map" href="http://ditu.google.cn/maps?q=上海市浦东张江博云路2号浦软大厦" title="到Google上查看详细地图信息">
+                        <div id="map_canvas"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sponsor">
+            <div class="container">
+                <div class="row">
+                    <div class="title">
+                        <div class="inner">
+                            活动赞助   
+                        </div>
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-md-4">
+                        <h4>主办方</h4>
+                        <div class="organization-info">
+                            <div class="logo-wrapper">
+                                <a target="_blank" href="http://chinagdg.com/forum-36-1.html">
+                                    <img class="logo" src="statics/image/GDGShanghai.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <h4>赞助方</h4>
+                        <div class="raw sponsor-info">
+                            <div class="logo-wrapper">
+                                <a target="_blank" href="http://www.google.com">
+                                    <img class="logo" src="statics/image/new-google-logo-official.png" alt="">
+                                </a>
+                            </div>
+                            <div class="logo-wrapper">
+                                <a target="_blank" href="http://developers.google.com">
+                                    <img class="logo" src="statics/image/Google-Developers-Logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>DevFest 2013 Shanghai 更多活动进展，请关注活动微信</p>
+            <img id="aimg_J1RSH" class="zoom" width="150" height="150" src="http://gallery.mailchimp.com/3354bfad8c6e60f4e1333e2c6/images/qrcode_for_gh_2625d70d8b6a_344.jpg" border="0" alt="GDG Shanghai" />
+        </div>
+    </footer>
+    <!-- 调用 Google Map API -->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCj11UvqN3WiIqDGnEkPYE78M66YojcGxs&sensor=true" ></script>
+    <script type="text/javascript"> 
+    function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(31.202521973055223, 121.60407688468695),
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+        var marker = new google.maps.Marker({
+            position: map.getCenter(),
+            map: map,
+            title: '上海市浦东张江博云路2号浦软大厦'
+        });
+    }       
+    $(document).ready(function() {
+        initialize();
+        // 调用slides
+        //$('#slides').superslides({'inherit_width_from':'#overview_container'});
+        
+    });
+    </script>
+    <script>
+        // TODO: move these scritp into external js file
+        //===================================================================================
+        var Local = window.Local || {}; // global namespace
+        
+        // const value
+        var SECOND = 1000;
+        var MINUTE = 60 * SECOND;
+        var HOUR = 60 * MINUTE;
+        var DAY = 24 * HOUR;
+
+
+        $(function() {
+            var deadline = new Date(2013, 9, 20, 9); // 2013.10.20 - 9:00 am
+
+            // update countdown view
+            var updateCount = (function() {
+                var days    = $('#count-down-days .num'),
+                    hours   = $('#count-down-hours .num'),
+                    minutes = $('#count-down-minutes .num'),
+                    seconds = $('#count-down-seconds .num');
+                return function(d, h, m, s) {
+                    days.text(d);
+                    hours.text(h);
+                    minutes.text(m);
+                    seconds.text(s);
+                };
+            })();
+
+            // format Date object to formated date
+            var formatRestTime = function(time) {
+                var d, h, m, s;
+                d = Math.floor(time / DAY);
+                time %= DAY;
+                h = Math.floor(time / HOUR);
+                time %= HOUR;
+                m = Math.floor(time / MINUTE);
+                time %= MINUTE;
+                s = Math.floor(time / SECOND);
+                return {
+                    d: d, // rest days
+                    h: h, // rest hours
+                    m: m, // rest minutes
+                    s: s  // rest seconds
+                };
+            };
+
+            // countdown every second from a specified time
+            var countDown = function(restTime) {
+                if (restTime > 0) {
+                    var t = formatRestTime(restTime),
+                        rest = restTime - SECOND;
+                    updateCount(t.d, t.h, t.m, t.s);
+
+                    setTimeout(function() {
+                        countDown(rest)
+                    }, SECOND);
+                } else {
+                    updateCount(0, 0, 0);
+                }
+            };
+
+            // start countdown since now
+            Local.startCount = function(){
+                var now = new Date();
+                var rest = deadline - now;
+                countDown(rest);
+            };
+            Local.startCount();
+        });
+    </script>
+</body>
+</html>

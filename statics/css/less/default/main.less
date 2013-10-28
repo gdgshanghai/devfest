@@ -47,6 +47,15 @@
                 font-size: 26px;
             }
         }
+        .info {
+            font-size: 48px;
+            text-align: center;
+            color: white;
+            padding-bottom: 20px;
+            margin: 0 -80px 50px;
+            padding-top: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
     }
     .triangle {
         margin: -70px auto 0;
@@ -133,6 +142,43 @@
 
 .overview {
     background-color: #3369E8;
+    color: white;
+    padding-top: 100px;
+    height: 680px;
+    a.link.all {
+        margin-left: 20px;
+        font-size: 16px;
+        color: white;
+        padding-left: 40px;
+        background: url(http://devfest2013.u.qiniudn.com/download.png) left no-repeat;
+    }
+    ul {
+        list-style: none;
+        font-size: 16px;
+        margin-top: 20px;
+        li {
+            padding: 15px 0;
+            text-align: left;
+            border-bottom: 1px solid white;
+            &:first-child {
+                border-top: 1px solid white;
+            }
+            .speaker {
+                display: inline-block;
+                background-color: transparent;
+                width: 120px;
+            }
+            .topic {
+                width: 350px;
+                display: inline-block;
+            }
+            a{
+                color: white;
+                padding-left: 40px;
+                background: url(http://devfest2013.u.qiniudn.com/download.png) left no-repeat;
+            }
+        }
+    }
 }
 #overview_container {
     height: 400px;  // 1000px
@@ -298,4 +344,7 @@ footer, .footer {
     font-size: 16px;
     padding: 20px 0;
     background-color: #444;
+    .powered-by {
+        text-align: right;
+    }
 }
